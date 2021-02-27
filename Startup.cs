@@ -62,6 +62,8 @@ namespace BookStore_API
             });
 
             services.AddSingleton<ILoggerService, LoggerService>();
+            services.AddScoped<IAuthorRepository, AuthorRepository>();
+            //services.AddSingleton<IBookRepository, AuthorRepository>();
 
             services.AddControllers();
         }

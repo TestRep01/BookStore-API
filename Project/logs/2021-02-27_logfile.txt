@@ -1,0 +1,12 @@
+2021-02-27 08:37:20.0334 ERROR Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Author
+System.Object -> BookStore_API.Data.Author
+2021-02-27 08:37:20.1216 ERROR Something went wrong
+2021-02-27 08:37:46.9118 ERROR Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Author
+System.Object -> BookStore_API.Data.Author
+2021-02-27 08:37:46.9118 ERROR Something went wrong
