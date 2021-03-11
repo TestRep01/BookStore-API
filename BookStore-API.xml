@@ -43,5 +43,51 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:BookStore_API.Controllers.BooksController">
+            <summary>
+            Interacts to books table
+            </summary>
+        </member>
+        <member name="M:BookStore_API.Controllers.BooksController.GetBooks">
+            <summary>
+             Get all Books
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BookStore_API.Controllers.BooksController.GetBookById(System.Int32)">
+            <summary>
+             Get all Book by ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BookStore_API.Controllers.BooksController.Create(BookStore_API.DTOs.BookCreateDTO)">
+            <summary>
+            Create book
+            </summary>
+            <param name="bookDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStore_API.Controllers.BooksController.Update(System.Int32,BookStore_API.DTOs.BookUpdateDTO)">
+            <summary>
+            Update Book
+            </summary>
+            <param name="id"></param>
+            <param name="BookDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStore_API.Controllers.BooksController.Delete(System.Int32)">
+            <summary>
+             book delete
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStore_API.Controllers.UsersController.Login(BookStore_API.DTOs.UserDTO)">
+            <summary>
+               userlogin endpoint
+            </summary>
+            <param name="userDTO"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
