@@ -1,0 +1,9 @@
+2021-03-20 17:19:53.1726 ERROR Users - Registor- PasswordRequiresNonAlphanumeric Passwords must have at least one non alphanumeric character.
+2021-03-20 17:19:55.0701 ERROR Users - Registor- PasswordRequiresUpper Passwords must have at least one uppercase ('A'-'Z').
+2021-03-20 17:19:59.3761 ERROR Users - Registor- test@hotmail.com registration failed
+2021-03-20 17:21:17.9135 ERROR Users - Registor- PasswordRequiresNonAlphanumeric Passwords must have at least one non alphanumeric character.
+2021-03-20 17:21:17.9270 ERROR Users - Registor- PasswordRequiresUpper Passwords must have at least one uppercase ('A'-'Z').
+2021-03-20 17:21:17.9439 ERROR Users - Registor- test@hotmail.com registration failed
+2021-03-20 17:23:27.8445 ERROR Users - Registor- PasswordRequiresNonAlphanumeric Passwords must have at least one non alphanumeric character.
+2021-03-20 17:23:27.8765 ERROR Users - Registor- PasswordRequiresUpper Passwords must have at least one uppercase ('A'-'Z').
+2021-03-20 17:23:27.8765 ERROR Users - Registor- roguevixen23@rocketmail.com registration failed

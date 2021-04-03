@@ -35,10 +35,55 @@ namespace BookStore_API.Controllers
         }
 
         /// <summary>
+        ///    registor endpoint
+        /// </summary>
+        /// <param name="userDTO"></param>
+        /// <returns></returns>
+        [Route("registor")]
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<IActionResult> Registor([FromBody] UserDTO userDTO)
+        {
+            var location = GetControloerActionNames();
+
+            try
+            {
+                // Create new user
+                var user = new IdentityUser {Email =  userDTO.EmailAddress, UserName = userDTO.EmailAddress };
+                var result = await _userInManager.CreateAsync(user, userDTO.Password);
+         
+
+                if (!result.Succeeded)
+                {
+                  
+
+                    foreach (var item in result.Errors)
+                    {
+                        _logger.Logerror($"{location}- {item.Code} {item.Description}");
+                    }
+
+                    return InterError($"{location}- {user.UserName} registration failed");
+
+                }
+
+                // return new geniric object
+                return Ok(new { result.Succeeded});
+            }
+            catch (Exception ex)
+            {
+                _logger.Logerror(ex.Message);
+                return InterError($"{location}- {ex.InnerException} - {ex.Message}");
+            }
+
+        }
+
+
+        /// <summary>
         ///    userlogin endpoint
         /// </summary>
         /// <param name="userDTO"></param>
         /// <returns></returns>
+        [Route("login")]
         [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] UserDTO userDTO)
@@ -47,11 +92,11 @@ namespace BookStore_API.Controllers
 
             try
             {
-                var result = await _signInManager.PasswordSignInAsync(userDTO.Username, userDTO.Password, false, false);
+                var result = await _signInManager.PasswordSignInAsync(userDTO.EmailAddress, userDTO.Password, false, false);
 
                 if (result.Succeeded)
                 {
-                    var user = await _userInManager.FindByNameAsync(userDTO.Username);
+                    var user = await _userInManager.FindByNameAsync(userDTO.EmailAddress);
                     var tokenString = GenerateJSONWebToken(user);
                     return Ok(new { tokenString });
                 }
